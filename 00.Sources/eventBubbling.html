@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<div id="first" class="first">
+    Fisrt
+    <div id="second" class="second">
+        Second
+        <div id="third" class="third">
+            Third        
+        </div>
+    </div>
+</div>
+<body>
+    <script>
+        var divs = document.querySelectorAll("div");
+        divs.forEach(function(div) {
+            div.addEventListener("click", logEvent);
+        });
+
+        function logEvent(event) {
+            console.log(event.currentTarget.className);
+        }
+    </script>
+</body>
+</html>
