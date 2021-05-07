@@ -1,9 +1,9 @@
 var makeLegion = function(leader) {
-    var adjutants = null;
+    var adjutant = null;
     var army = 0;
     return {
         setAdjutant: function(list) {
-            adjutants = list;
+            adjutant = list;
             return this;
         },
         setArmy: function(number) {
@@ -11,15 +11,15 @@ var makeLegion = function(leader) {
             return this;
         },
         build: function() {
-            return new Legion(leader, adjutants, army);
+            return new Legion(leader, adjutant, army);
         }
     };
 };
 
 var Legion = (function() {
-    function Legion(leader, adjutants, number) {
+    function Legion(leader, adjutant, number) {
         this.leader = leader;
-        this.adjutants = adjutants;
+        this.adjutants = adjutant;
         this.number = number || 0;
     }
     Legion.prototype.attack = function(target) {
