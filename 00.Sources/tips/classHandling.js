@@ -1,5 +1,5 @@
 // ************************
-// ? class by function
+// ¡Ú class by function
 // ************************
 function Cat(name, age) {
     this.name = name;
@@ -16,19 +16,19 @@ cake.makeNoise();
 
 
 // ************************
-// ? class by class (ES6)
+// ¡Ú class by class (ES6)
 // ************************
 class Animal {
-    constructor(name, age, hiding='secret') { // ? constructor
-        var hiding = hiding; // ? hiding by scope range
-        this.name = name; // ? property
-        this.age = age; // ? property
+    constructor(name, age, hiding='secret') { // ¡Ú constructor
+        var hiding = hiding; // ¡Ú hiding by scope range
+        this.name = name; // ¡Ú property
+        this.age = age; // ¡Ú property
         this.getHiding = () => {
             return hiding;
         };
     }
 
-    getName() { // ? method
+    getName() { // ¡Ú method
         console.log(this.name);
     }
 
@@ -36,11 +36,11 @@ class Animal {
         console.log(this.age);
     }
 
-    static sleep() { // ? static method
+    static sleep() { // ¡Ú static method
         console.log('Zzz');
     }
 
-    makeNoise() { // ? abstract
+    makeNoise() { // ¡Ú abstract
         throw new Error('not implemented');
     }
 }
@@ -55,7 +55,7 @@ console.log(dog.getHiding());
 
 
 // ************************
-// ? inheritance and polymorphism
+// ¡Ú inheritance and polymorphism
 // ************************
 class Dog extends Animal {
     constructor (name, age, hiding) {
@@ -77,7 +77,7 @@ jake.makeNoise();
 
 
 // ************************
-// ? overriding
+// ¡Ú overriding
 // ************************
 class Bread {
     constructor(name) {
@@ -105,5 +105,5 @@ bananaBread.checkInside();
 
 
 // ************************
-// ? overloading : not possible in js
+// ¡Ú overloading : not possible in js
 // ************************
